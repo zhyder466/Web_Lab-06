@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can You Guess The Number?</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        #message {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        #guess-input {
+            width: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #guess-button {
+            padding: 10px 20px;
+            background-color: blue;
+            border-radius: 10%;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        #guess-button:hover {
+            background-color: #3e8e41;
+        }
+
+        #attempts {
+            font-size: 1.2em;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Can You Guess The Number?</h1>
+    <p id="message">Guess a number between 1 and 50!</p>
+    <input type="number" id="guess-input" placeholder="Enter a number">
+    <button id="guess-button">Guess</button>
+    <p id="attempts">Attempts: 0</p>
+    <script src="index2.js"></script>
+</body>
+
+</html>
