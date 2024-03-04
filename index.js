@@ -4,18 +4,24 @@ const addTaskForm = document.getElementById('add-task-form');
 
 function addTask(task) {
     const listItem = document.createElement('li');
-    listItem.innerText = task;
+    listItem.innerHTML = `
+        <span>${task}</span>
+        <i class="fas fa-times remove-task"></i>
+    `;
 
-    listItem.addEventListener('click', function() {
-        this.remove();
+    const removeButton = listItem.querySelector('.remove-task');
+
+    removeButton.addEventListener('click', function() {
+        listItem.remove();
     });
+
     todoList.appendChild(listItem);
-    newTaskInput.value = ''; 
+    newTaskInput.value = '';
 }
 
 addTaskForm.addEventListener('submit', function(event) {
-    event.preventDefault(); 
-    const newTask = newTaskInput.value.trim(); 
+    event.preventDefault();
+    const newTask = newTaskInput.value.trim();
     if (newTask) {
         addTask(newTask);
     }

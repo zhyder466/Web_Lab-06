@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My To-Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: sans-serif;
@@ -22,6 +23,16 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .remove-task {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            cursor: pointer;
+            color: red;
         }
 
         #add-task-form {
@@ -44,6 +55,7 @@
             cursor: pointer;
         }
     </style>
+</head>
 
 <body>
     <h1>My To-Do List</h1>
